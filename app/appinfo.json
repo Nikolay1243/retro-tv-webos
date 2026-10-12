@@ -1,0 +1,11 @@
+{
+  "id": "com.retro.decades.tv",
+  "version": "0.4.2",
+  "vendor": "Independent prototype",
+  "type": "web",
+  "main": "index.html",
+  "title": "Retro TV Decades",
+  "icon": "icon-retro-tv.png",
+  "largeIcon": "largeIcon-retro-tv.png",
+  "disableBackHistoryAPI": true
+}

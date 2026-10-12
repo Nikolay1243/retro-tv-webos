@@ -1,0 +1,8 @@
+*.ipk
+*.zip
+.DS_Store
+node_modules/
+compat/settings.json
+compat/settings.json.tmp
+*.log
+*.pid

@@ -15,7 +15,7 @@ The television experiences, video catalog, original TV artwork and decade sites 
 
 This independent webOS launcher adds remote controls, shared settings and a showroom menu. It is not an official MyRetroTVs app and is not affiliated with Joey Cato or LG. Original content continues to load from the original sites and their video providers. Support the creator through the links on MyRetroTVs.
 
-![Showroom menu](docs/showroom.png)
+![Showroom menu](https://raw.githubusercontent.com/Nikolay1243/retro-tv-webos/main/docs/showroom-preview.jpg)
 
 ## Using the app
 

@@ -1,4 +1,4 @@
-# Retro TV Decades — webOS 0.4.5
+# Retro TV Decades — webOS 0.4.6
 
 A personal launcher for rooted LG webOS TVs, tested on webOS TV 9.2.2. The app opens the original MyRetroTVs sites directly, with an app-scoped compatibility helper that adds TV controls through the TV's existing local web inspector. Video remains hosted by the original providers.
 
@@ -44,9 +44,9 @@ On a rooted LG TV with [Homebrew Channel](https://github.com/webosbrew/webos-hom
 
 3. Save the repository and return to the apps list. Refresh it if necessary.
 4. Find **Retro TV Decades** and choose **Install** or **Update**.
-5. Complete the one-time **compatibility helper** setup below. Homebrew Channel installs the IPK; it does not install the companion ZIP or its startup hook.
+5. Launch the app. The bundled compatibility helper starts automatically through rooted Homebrew Channel; no ZIP or SSH setup is required.
 
-The ordinary GitHub repository page is not the feed URL. Use the raw `apps.json` address above. The feed references this release's package manifest and SHA-256 checksum.
+The ordinary GitHub repository page is not the feed URL. Use the raw `apps.json` address above. The feed references the latest published package manifest and SHA-256 checksum.
 
 You can also open the Add repository dialog from the webOS CLI:
 
@@ -61,14 +61,14 @@ Repository format and launch parameters follow [the Homebrew Channel project](ht
 Generated IPK packages are excluded from source control. Build from the repository root using the webOS CLI:
 
 ```sh
-ares-package app -o .
-ares-install --device YOUR_TV com.retro.decades.tv_0.4.5_all.ipk
+ares-package --no-minify app -o .
+ares-install --device YOUR_TV com.retro.decades.tv_0.4.6_all.ipk
 ares-launch --device YOUR_TV com.retro.decades.tv
 ```
 
 On rooted TVs, installation can also use the developer app installation Luna service over SSH.
 
-The compatibility helper is separate from the IPK. It resides at `/media/developer/retro-tv-compat` on the TV. The existing webOSbrew startup hook `/var/lib/webosbrew/init.d/retro-tv-controls.sh` starts `daemon.js`. This rooted-TV setup and its existing inspector at `127.0.0.1:9998` are required for the added controls. Installing the IPK alone on an ordinary TV does not provide the helper features.
+The IPK bundles the compatibility helper in `app/compat`. On launch, the app calls Homebrew Channel's root execution service to start it. A rooted TV, elevated Homebrew Channel and the existing localhost web inspector on port 9998 are required. Saved preferences remain in `/media/developer/retro-tv-compat/settings.json` across package updates. The startup script replaces the app's previous helper process and removes its legacy startup hook when recognized.
 
 `daemon.js` verifies `PalmSystem.identifier` equals `com.retro.decades.tv` before attaching, permits only local debugger sockets, stores validated settings in `settings.json` atomically, and uses debugger bindings to share settings across origins. It forwards Back from the app's YouTube frames and uses debugger navigation to return reliably from HTTPS to the local showroom. It observes only that app's YouTube frame contexts to read `videoWidth` and `videoHeight`. No video is downloaded by the helper.
 
@@ -92,7 +92,7 @@ Remove `/var/lib/webosbrew/init.d/retro-tv-controls.sh`, terminate only the Node
 - https://webostv.developer.lge.com/develop/guides/system-ui-visibility
 - https://developers.google.com/youtube/iframe_api_reference
 
-Version 0.4.5 replaces the placeholder launcher icons with a generated vintage CRT / test-pattern illustration in 80px and 130px sizes.
+Version 0.4.6 replaces the placeholder launcher icons with a generated vintage CRT / test-pattern illustration in 80px and 130px sizes.
 
 The showroom toolbar now contains **Resume watching** and **Global settings**. Global settings offers startup, automatic channel changes, shuffle, playlist, fullscreen startup/surround, sound effects, glow, static overlay and noise level. Settings save immediately for every decade. Red opens the menu; arrows/OK operate it; Back closes it without exiting the showroom. Menu updates and Back-to-close were verified on the TV.
 
@@ -104,14 +104,12 @@ The embedded player helper hides YouTube's central mobile play/pause graphic and
 
 Launcher icons now use new filenames `icon-retro-tv.png` and `largeIcon-retro-tv.png` to avoid reusing cached placeholder icon paths.
 
-## Installing the compatibility helper
-
-Copy the files from `compat/` into `/media/developer/retro-tv-compat` on the rooted TV. Make `start.sh` executable and run it. If the TV already uses webOSbrew startup hooks, copy `start.sh` to `/var/lib/webosbrew/init.d/retro-tv-controls.sh` and make that file executable as well. The helper requires the TV's existing Node.js runtime and web inspector on localhost port 9998. Settings are created on the TV; do not commit `settings.json`, logs, screenshots from debugger validation, or PID files.
-
 ## Artwork attribution
 
 See [ATTRIBUTION.md](ATTRIBUTION.md) for image provenance and third-party credits. No third-party license or redistribution permission is implied by this repository. The original MyRetroTVs artwork remains the original creator's work.
 
-Version 0.4.5 adds evenly spaced showroom wall panels with subtle groove and bevel highlights.
+Bundled-helper v0.4.6 is locally validated; first-launch and restart behavior still require a TV check.
+
+Version 0.4.6 adds evenly spaced showroom wall panels with subtle groove and bevel highlights.
 
 Wall panelling is limited to the shelving display area; the surrounding wall stays plain.

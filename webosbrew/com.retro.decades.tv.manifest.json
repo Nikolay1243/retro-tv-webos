@@ -1,14 +1,14 @@
 {
   "id": "com.retro.decades.tv",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "type": "web",
   "title": "Retro TV Decades",
   "appDescription": "Six original MyRetroTVs decades by Joey Cato, with a showroom and bundled remote-control helper. Requires rooted Homebrew Channel and the local TV inspector.",
   "iconUri": "https://raw.githubusercontent.com/Nikolay1243/retro-tv-webos/main/app/largeIcon-retro-tv.png",
   "sourceUrl": "https://github.com/Nikolay1243/retro-tv-webos",
   "rootRequired": true,
-  "ipkUrl": "https://github.com/Nikolay1243/retro-tv-webos/releases/download/v0.4.6/com.retro.decades.tv_0.4.6_all.ipk",
+  "ipkUrl": "https://github.com/Nikolay1243/retro-tv-webos/releases/download/v0.4.7/com.retro.decades.tv_0.4.7_all.ipk",
   "ipkHash": {
-    "sha256": "d2d092d7b0b353eb93f7b6823cf62e8c2eeeff2813922e8f3778a76ccef1f0d7"
+    "sha256": "11fe312edd1b96a7f22da063756bc9678c4ca2b0203ead26e75e665129b4710e"
   }
 }

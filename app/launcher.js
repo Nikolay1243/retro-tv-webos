@@ -30,17 +30,5 @@
   });
   // Enter/OK uses native link activation. Back is managed by webOS history.
   window.addEventListener("pageshow", restoreFocus);
-  function place00sLogo() {
-    var stage=document.querySelector('[data-era="00s"] .tv-stage');
-    var photo=stage.querySelector('img:not(.tv-screen-logo)'),logo=stage.querySelector('.tv-screen-logo');
-    var image=photo.getBoundingClientRect(),area=stage.getBoundingClientRect();
-    logo.style.left=(image.left-area.left+image.width*(415/827))+'px';
-    logo.style.top=(image.top-area.top+image.height*(247/580))+'px';
-    logo.style.width=(image.width*0.48)+'px';
-  }
-  document.querySelector('[data-era="00s"] .tv-stage img').addEventListener('load',place00sLogo);
-  window.addEventListener('resize',place00sLogo);
-  window.addEventListener('pageshow',place00sLogo);
-  place00sLogo();
   restoreFocus();
 }());

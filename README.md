@@ -1,4 +1,4 @@
-# Retro TV Decades — webOS 0.4.6
+# Retro TV Decades — webOS 0.4.7
 
 A personal launcher for rooted LG webOS TVs, tested on webOS TV 9.2.2. The app opens the original MyRetroTVs sites directly, with an app-scoped compatibility helper that adds TV controls through the TV's existing local web inspector. Video remains hosted by the original providers.
 
@@ -15,7 +15,7 @@ The television experiences, video catalog, original TV artwork and decade sites 
 
 This independent webOS launcher adds remote controls, shared settings and a showroom menu. It is not an official MyRetroTVs app and is not affiliated with Joey Cato or LG. Original content continues to load from the original sites and their video providers. Support the creator through the links on MyRetroTVs.
 
-![Showroom menu](https://raw.githubusercontent.com/Nikolay1243/retro-tv-webos/main/docs/showroom-v045.jpg)
+![Showroom menu](https://raw.githubusercontent.com/Nikolay1243/retro-tv-webos/main/docs/showroom-v047.jpg)
 
 ## Using the app
 
@@ -62,7 +62,7 @@ Generated IPK packages are excluded from source control. Build from the reposito
 
 ```sh
 ares-package --no-minify app -o .
-ares-install --device YOUR_TV com.retro.decades.tv_0.4.6_all.ipk
+ares-install --device YOUR_TV com.retro.decades.tv_0.4.7_all.ipk
 ares-launch --device YOUR_TV com.retro.decades.tv
 ```
 
@@ -92,7 +92,7 @@ Remove `/var/lib/webosbrew/init.d/retro-tv-controls.sh`, terminate only the Node
 - https://webostv.developer.lge.com/develop/guides/system-ui-visibility
 - https://developers.google.com/youtube/iframe_api_reference
 
-Version 0.4.6 replaces the placeholder launcher icons with a generated vintage CRT / test-pattern illustration in 80px and 130px sizes.
+Version 0.4.7 replaces the placeholder launcher icons with a generated vintage CRT / test-pattern illustration in 80px and 130px sizes.
 
 The showroom toolbar now contains **Resume watching** and **Global settings**. Global settings offers startup, automatic channel changes, shuffle, playlist, fullscreen startup/surround, sound effects, glow, static overlay and noise level. Settings save immediately for every decade. Red opens the menu; arrows/OK operate it; Back closes it without exiting the showroom. Menu updates and Back-to-close were verified on the TV.
 
@@ -108,8 +108,10 @@ Launcher icons now use new filenames `icon-retro-tv.png` and `largeIcon-retro-tv
 
 See [ATTRIBUTION.md](ATTRIBUTION.md) for image provenance and third-party credits. No third-party license or redistribution permission is implied by this repository. The original MyRetroTVs artwork remains the original creator's work.
 
-Bundled-helper v0.4.6 is locally validated; first-launch and restart behavior still require a TV check.
+Bundled-helper v0.4.7 is locally validated; first-launch and restart behavior still require a TV check.
 
-Version 0.4.6 adds evenly spaced showroom wall panels with subtle groove and bevel highlights.
+Version 0.4.7 adds evenly spaced showroom wall panels with subtle groove and bevel highlights.
 
 Wall panelling is limited to the shelving display area; the surrounding wall stays plain.
+
+Version 0.4.7 uses the original transparent homepage TV images for all six showroom sets, removing the black image backgrounds.

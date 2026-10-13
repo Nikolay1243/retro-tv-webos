@@ -6,7 +6,14 @@ Original television experiences, decade interfaces and original TV images: **Joe
 
 Original sites: [1950s](https://50s.myretrotvs.com/), [1960s](https://60s.myretrotvs.com/), [1970s](https://70s.myretrotvs.com/), [1980s](https://80s.myretrotvs.com/), [1990s](https://90s.myretrotvs.com/), [2000s](https://00s.myretrotvs.com/).
 
-`app/images/50s.webp`, `60s.webp`, `70s.webp`, `80s.webp`, and `90s.webp` originate from `https://00s.myretrotvs.com/img/my50stv.webp` through `my90stv.webp`. `app/images/00s.webp` originates from `https://00s.myretrotvs.com/img/tvbackclean.webp`. These images are used to identify the corresponding original TV experiences. `docs/showroom.png` also contains these TV images.
+The six `app/images/*s-homepage.webp` showroom TV images are the transparent homepage artwork from MyRetroTVs, created by Joey Cato. Original asset URLs:
+
+- https://www.myretrotvs.com/assets/my50slogo-Bpstd39L.webp
+- https://www.myretrotvs.com/assets/my60slogo-Dp6NDYog.webp
+- https://www.myretrotvs.com/assets/my70slogo-BPqSvWFZ.webp
+- https://www.myretrotvs.com/assets/my80slogo-DBLuVJ2W.webp
+- https://www.myretrotvs.com/assets/my90slogo-CDSjZIvL.webp
+- https://www.myretrotvs.com/assets/my00slogo-vIefh1Yl.webp
 
 The original creator is credited in the on-screen showroom footer. These assets are not claimed as original work of this launcher. Attribution does not grant redistribution rights; obtain the creator's permission for broader distribution. This repository does not mirror the original application scripts or video catalog.
 
@@ -20,4 +27,3 @@ Generation prompt: A polished square retro CRT television icon with walnut cabin
 
 Videos remain served through the original MyRetroTVs sites and YouTube. LG, webOS and YouTube names belong to their respective owners. No affiliation or endorsement is implied.
 
-`app/images/00s-logo.webp` is the original My00sTV logo from https://00s.myretrotvs.com/img/logoboxcreased.webp, displayed in the 2000s showroom television screen. Credit: Joey Cato / MyRetroTVs.

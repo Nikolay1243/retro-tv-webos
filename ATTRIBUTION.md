@@ -19,3 +19,5 @@ Generation prompt: A polished square retro CRT television icon with walnut cabin
 ## Other parties
 
 Videos remain served through the original MyRetroTVs sites and YouTube. LG, webOS and YouTube names belong to their respective owners. No affiliation or endorsement is implied.
+
+`app/images/00s-logo.webp` is the original My00sTV logo from https://00s.myretrotvs.com/img/logoboxcreased.webp, displayed in the 2000s showroom television screen. Credit: Joey Cato / MyRetroTVs.

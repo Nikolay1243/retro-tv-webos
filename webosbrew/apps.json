@@ -1,0 +1,16 @@
+{
+  "paging": {
+    "page": 1,
+    "count": 1,
+    "maxPage": 1,
+    "itemsTotal": 1
+  },
+  "packages": [
+    {
+      "id": "com.retro.decades.tv",
+      "title": "Retro TV Decades",
+      "iconUri": "https://raw.githubusercontent.com/Nikolay1243/retro-tv-webos/main/app/largeIcon-retro-tv.png",
+      "manifestUrl": "https://raw.githubusercontent.com/Nikolay1243/retro-tv-webos/main/webosbrew/com.retro.decades.tv.manifest.json"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Retro TV Decades — webOS 0.4.4
+# Retro TV Decades — webOS 0.4.5
 
 A personal launcher for rooted LG webOS TVs, tested on webOS TV 9.2.2. The app opens the original MyRetroTVs sites directly, with an app-scoped compatibility helper that adds TV controls through the TV's existing local web inspector. Video remains hosted by the original providers.
 
@@ -15,7 +15,7 @@ The television experiences, video catalog, original TV artwork and decade sites 
 
 This independent webOS launcher adds remote controls, shared settings and a showroom menu. It is not an official MyRetroTVs app and is not affiliated with Joey Cato or LG. Original content continues to load from the original sites and their video providers. Support the creator through the links on MyRetroTVs.
 
-![Showroom menu](https://raw.githubusercontent.com/Nikolay1243/retro-tv-webos/main/docs/showroom-v044.jpg)
+![Showroom menu](https://raw.githubusercontent.com/Nikolay1243/retro-tv-webos/main/docs/showroom-v045.jpg)
 
 ## Using the app
 
@@ -31,13 +31,38 @@ This independent webOS launcher adds remote controls, shared settings and a show
 - Back first closes settings if open; otherwise it returns directly to the showroom, including from fullscreen. Back at the showroom exits.
 - **Resume watching** opens the last era and clip. **Start app: Showroom / Resume watching** chooses launch behavior. Returning deliberately to the showroom does not immediately resume. A playback position is saved periodically and used when resuming a clip.
 
+## Install through Homebrew Channel
+
+On a rooted LG TV with [Homebrew Channel](https://github.com/webosbrew/webos-homebrew-channel) installed:
+
+1. Open **Homebrew Channel → Settings → Add repository** (repository management).
+2. Enter this repository-feed URL exactly:
+
+   ```text
+   https://raw.githubusercontent.com/Nikolay1243/retro-tv-webos/main/webosbrew/apps.json
+   ```
+
+3. Save the repository and return to the apps list. Refresh it if necessary.
+4. Find **Retro TV Decades** and choose **Install** or **Update**.
+5. Complete the one-time **compatibility helper** setup below. Homebrew Channel installs the IPK; it does not install the companion ZIP or its startup hook.
+
+The ordinary GitHub repository page is not the feed URL. Use the raw `apps.json` address above. The feed references this release's package manifest and SHA-256 checksum.
+
+You can also open the Add repository dialog from the webOS CLI:
+
+```sh
+ares-launch org.webosbrew.hbchannel -p '{"launchMode":"addRepository","url":"https://raw.githubusercontent.com/Nikolay1243/retro-tv-webos/main/webosbrew/apps.json"}'
+```
+
+Repository format and launch parameters follow [the Homebrew Channel project](https://github.com/webosbrew/webos-homebrew-channel#repository-management) and its [official repository example](https://github.com/webosbrew/docs/blob/main/test/repo.json).
+
 ## Build and TV installation
 
 Generated IPK packages are excluded from source control. Build from the repository root using the webOS CLI:
 
 ```sh
 ares-package app -o .
-ares-install --device YOUR_TV com.retro.decades.tv_0.4.4_all.ipk
+ares-install --device YOUR_TV com.retro.decades.tv_0.4.5_all.ipk
 ares-launch --device YOUR_TV com.retro.decades.tv
 ```
 
@@ -67,7 +92,7 @@ Remove `/var/lib/webosbrew/init.d/retro-tv-controls.sh`, terminate only the Node
 - https://webostv.developer.lge.com/develop/guides/system-ui-visibility
 - https://developers.google.com/youtube/iframe_api_reference
 
-Version 0.4.4 replaces the placeholder launcher icons with a generated vintage CRT / test-pattern illustration in 80px and 130px sizes.
+Version 0.4.5 replaces the placeholder launcher icons with a generated vintage CRT / test-pattern illustration in 80px and 130px sizes.
 
 The showroom toolbar now contains **Resume watching** and **Global settings**. Global settings offers startup, automatic channel changes, shuffle, playlist, fullscreen startup/surround, sound effects, glow, static overlay and noise level. Settings save immediately for every decade. Red opens the menu; arrows/OK operate it; Back closes it without exiting the showroom. Menu updates and Back-to-close were verified on the TV.
 
@@ -87,6 +112,6 @@ Copy the files from `compat/` into `/media/developer/retro-tv-compat` on the roo
 
 See [ATTRIBUTION.md](ATTRIBUTION.md) for image provenance and third-party credits. No third-party license or redistribution permission is implied by this repository. The original MyRetroTVs artwork remains the original creator's work.
 
-Version 0.4.4 adds evenly spaced showroom wall panels with subtle groove and bevel highlights.
+Version 0.4.5 adds evenly spaced showroom wall panels with subtle groove and bevel highlights.
 
 Wall panelling is limited to the shelving display area; the surrounding wall stays plain.
